@@ -1,0 +1,49 @@
+# Force a rescan after changing a file type. From a CLEAN git repo:
+#    rm .git/index     # Remove the index to force Git to
+#    git reset         # re-scan the working directory
+
+# All text files should have the "lf" (Unix) line endings
+* text eol=lf
+
+*.7z binary
+*.ai binary
+*.bmp binary
+*.class binary
+*.com binary
+*.css text
+*.dll binary
+*.doc binary
+*.docx binary
+*.eot binary
+*.eps binary
+*.exe binary
+*.gif binary
+*.gpg binary
+*.gz binary
+*.gzip binary
+*.html text
+*.icns binary
+*.iso binary
+*.jar binary
+*.java text
+*.jks binary
+*.jpeg binary 
+*.jpg binary
+*.js text
+*.lnk binary
+*.mp3 binary
+*.mp4 binary
+*.pkcs12 binary
+*.pdf binary
+*.png binary
+*.ppt binary
+*.rsa binary
+*.rtf binary
+*.swf binary
+*.tar binary
+*.ttf binary
+*.udm binary
+*.url binary
+*.war binary
+*.zip binary
+random_seed binary
