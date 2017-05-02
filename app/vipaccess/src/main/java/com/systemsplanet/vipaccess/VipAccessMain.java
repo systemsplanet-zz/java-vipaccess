@@ -26,9 +26,9 @@ public class VipAccessMain {
 
         byte[] otp_secret = VipEnc.decrypt(VipConst.AES_KEY, token.iv, token.cipher);
 
-        if (req.checkCredential(token.id, otp_secret) == false) {
-            LOG.error("Something went wrong--the token is invalid.");
-        }
+        //if (req.checkCredential(token.id, otp_secret) == false) {
+         //   LOG.error("Something went wrong--the token is invalid.");
+       // }
         new VipQrCode().writeQRCode(token, otp_secret);
 
         LOG.info("BE AWARE that this new credential expires on this date: " + token.expiry);
