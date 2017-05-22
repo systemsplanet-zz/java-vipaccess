@@ -29,7 +29,7 @@ E*Trade Configuration (one time)
     Login to E*Trade 
         https://us.etrade.com/e/t/user/login
         
-    Configure your account 
+    Configure your account (My Profile / Security & Passwords/ Manage Security ID/ SET UP A NEW SECURE ID)
         https://us.etrade.com/e/t/accounts/mfaactivatetoken?FirstTime=YES
             Mobile Phone#:  Enter your phone number    
             Credential ID:  Enter output from Run.cmd (eg VSTM1234566)
@@ -57,10 +57,10 @@ Example vipaccess.jar Output
     02:08:09.318 INFO  com.systemsplanet.vipaccess.cmd.CmdConfig          handleArg       proxyPort:[8888]
     02:08:09.318 INFO  com.systemsplanet.vipaccess.VipAccessMain          main            arguments:[-debug false -silent false -mode mobile -proxyHost localhost -proxyPort 8888] isSilent:false isDebug:false mode:VSMT
     02:08:11.056 INFO  com.systemsplanet.vipaccess.VipAccessMain          main            VipToken[status=Success,salt64=xxxxx=,iteration_count=50,iteration_count_int=50,iv64=xxx==,expiry=2020-02-01T07:08:11.026Z,id=VSMTnnnnnnnn,cipher64=xxx=,digest64=xxx=,salt={},iv={},cipher={},digest={}]
-    02:08:12.625 INFO  com.systemsplanet.vipaccess.VipQrCode              writeQRCode     otpauth://totp/VIP%20Access:VSMTnnnnnnnn?issuer=Symantec&secret=xxxxx&
-    02:08:12.750 INFO  com.systemsplanet.vipaccess.VipQrCode              writeQRCode     QR Code image file: C:\Users\xxx\AppData\Local\Temp\qrcode4851386043412303757.png
     02:08:12.766 INFO  com.systemsplanet.vipaccess.VipAccessMain          main            BE AWARE that this new credential expires on this date: 2020-02-01T07:08:11.026Z
     02:08:12.766 INFO  com.systemsplanet.vipaccess.VipAccessMain          main            E*Trade Id: VSMTnnnnnnnn
+    02:08:12.768 INFO  com.systemsplanet.vipaccess.VipQrCode              writeQRCode     otpauth://totp/VIP_Access:VSMTnnnnnnnn?issuer=Symantec&secret=xxxxx&
+    02:08:12.769 INFO  com.systemsplanet.vipaccess.VipQrCode              writeQRCode     QR Code image file: C:\Users\xxx\AppData\Local\Temp\qrcode4851386043412303757.png
    
 
 Maven Modules
