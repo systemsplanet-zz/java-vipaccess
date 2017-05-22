@@ -8,7 +8,7 @@ public class VipConst {
 
     public static final String           OTP_TYPE         = "totp";
 
-    public static final String           APP              = "VIP Access";
+    public static final String           APP              = "VIP_Access";
 
     public static final String           PROVISION_HOST   = "services.vip.symantec.com";
 
