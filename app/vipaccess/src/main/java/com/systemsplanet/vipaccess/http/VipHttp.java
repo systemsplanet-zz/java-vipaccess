@@ -32,11 +32,11 @@ public class VipHttp {
             wr.flush();
             wr.close();
             int responseCode = con.getResponseCode();
-            LOG.debug("Post response: " + responseCode);
+            LOG.info("Post response: " + responseCode);
             in = new BufferedReader(new InputStreamReader(con.getInputStream()));
             String inputLine;
             while ((inputLine = in.readLine()) != null) {
-                LOG.debug("   " + inputLine);
+                LOG.info("   " + inputLine);
                 response.append(inputLine);
             }
         }

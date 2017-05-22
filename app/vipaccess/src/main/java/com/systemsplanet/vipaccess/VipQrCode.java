@@ -38,6 +38,7 @@ public class VipQrCode {
                     .digits(VipConst.DIGITS).timeStep(VipConst.TIME_STEP_MS).build();
         LOG.debug("URI1: " + uri.toPlainTextUriString());
         LOG.info(otp_uri);
+        LOG.info("QR Code image file: " + pathOfQRCodeImage.toFile().getAbsolutePath());
         QRCodeWriter.fromURI(uri)
         .width(300)
         .height(300)
@@ -46,7 +47,6 @@ public class VipQrCode {
         .imageFormatName("PNG")
         .write(pathOfQRCodeImage);
         String qrText = getQRCodeImageRawText(pathOfQRCodeImage);
-        LOG.info("QR Code image file: " + pathOfQRCodeImage.toFile().getAbsolutePath());
         LOG.debug("From Image: " + qrText);
         return qrText;
     }
