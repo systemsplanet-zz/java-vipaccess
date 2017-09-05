@@ -16,11 +16,11 @@ public class VipAccessMain {
             LOG.info(cfg);
 
             String xmlReq = VipProvision.getRequestXml(cfg.mode);
-            LOG.debug(xmlReq);
+            LOG.info("request: " + xmlReq);
 
             VipRequest req = new VipRequest();
             String xmlResp = req.send(xmlReq);
-            LOG.info(xmlResp);
+            LOG.info("response:" + xmlResp);
 
             VipToken token = new VipToken().parse(xmlResp);
             LOG.info(token);

@@ -4,6 +4,10 @@ creates an E*Trade Security Token you can
 store in a Yubikey Neo hardware key and
 register with E*Trade for Two-Factor Login.
 
+For a single-html-file browser-based port of this project, see:
+  See https://github.com/systemsplanet/javascript-vipaccess                         
+
+
 Build (one time)
     Edit install.cmd to configure Java and Apache Maven:
 
@@ -84,3 +88,4 @@ LINKS
     https://www.yubico.com/products/yubikey-hardware/yubikey-neo/
     https://us.etrade.com/security-center
     https://github.com/cyrozap/python-vipaccess/blob/master/vipaccess/utils.py      - Original Python Script this app was ported from
+    https://github.com/systemsplanet/javascript-vipaccess                           - single html file browser version 

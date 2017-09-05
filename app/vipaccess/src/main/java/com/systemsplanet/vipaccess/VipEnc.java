@@ -59,19 +59,20 @@ public class VipEnc {
     // AES.new(TOKEN_ENCRYPTION_KEY, AES.MODE_CBC, iv)
     public static byte[] decrypt(byte[] encKey, byte[] iv, byte[] cipher) throws Exception {
         byte[] result;
-        LOG.debug("iv:" + bytesToHex(iv));
-        LOG.debug("cipher:" + bytesToHex(cipher));
+        LOG.info("key:" + bytesToHex(encKey));
+        LOG.info("iv:" + bytesToHex(iv));
+        LOG.info("cipher:" + bytesToHex(cipher));
         Cipher c = Cipher.getInstance("AES/CBC/NoPadding"); // PKCS5Padding NoPadding
         Key key = new SecretKeySpec(encKey, "AES");
         c.init(Cipher.DECRYPT_MODE, key, new IvParameterSpec(iv));
         result = c.doFinal(cipher);
-        LOG.debug("padded:" + bytesToHex(result));
+        LOG.info("padded:" + bytesToHex(result));
         int padlen = result[result.length - 1]; // PKCS7 pad len
         int len = result.length - padlen;
         if (padlen < 0 || len < 0) return result;
         byte[] out = new byte[len];
         System.arraycopy(result, 0, out, 0, len);
-        LOG.debug("decrypted:" + bytesToHex(out));
+        LOG.info("decrypted:" + bytesToHex(out));
         return out;
     }
 
