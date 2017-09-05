@@ -33,7 +33,7 @@ public class VipQrCode {
 
         String otp_uri = getOneTimePasswordURI(token.id, otp_secret);
         String secret32 = VipEnc.bytesToBase32(otp_secret);
-        LOG.info("secret32:["+ secret32+"]")
+        LOG.info("secret32:["+ secret32+"]");
         String label = String.format("%s:%s", u(VipConst.APP), token.id);
         OTPAuthURI uri = OTPAuthURIBuilder.fromKey(new OTPKey(secret32, OTPType.TOTP)).label(label).issuer(VipConst.DIST_CHANNEL)
                     .digits(VipConst.DIGITS).timeStep(VipConst.TIME_STEP_MS).build();
